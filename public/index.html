@@ -14,27 +14,26 @@
 }
 
 #map {
+    position: relative;
     height: 90vh;
     width: 810vh;
 }
 
 #search-container {
     position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 70px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 5; 
     width: 50%;
-    z-index: 5;
 }
 
 #search-input {
+    width: 100%; 
     padding: 10px;
-    width: 100%;
-    border: none;
+    border: 1px solid #ccc; 
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15); 
-    font-size: 16px;
-    background: #ffffff; 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); 
 }
 
 #sidebar {
@@ -99,14 +98,28 @@
     width: 100%;
     bottom: 0;
 }
+header {
+    background-color: #933393; 
+    color: #ffffff; 
+    text-align: center; 
+    padding: 10px 0; 
+    font-size: 24px; 
+}
+
+
 
     </style>
 </head>
 <body>
+    <header>
+        <img src="logo.jpg" alt="Logo" height="30" class="d-inline-block align-text-top">
+            Team Black Dining Discoveries
+    </header>
+
+    <div id="map"></div> 
     <div id="search-container">
         <input type="text" id="search-input" placeholder="Enter a city...">
     </div>
-    <div id="map"></div>
     <div id="sidebar">
         <button id="togglePosition" class="btn btn-secondary">Toggle Position</button>
         <h2>Restaurants</h2>
